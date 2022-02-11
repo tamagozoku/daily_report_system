@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import main.java.constants.JpaConst;
+import constants.JpaConst;
 
 public class DBUtil {
 
