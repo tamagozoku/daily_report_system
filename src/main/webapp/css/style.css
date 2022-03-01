@@ -154,3 +154,23 @@ pre {
 h3 {
     font-size: larger;
 }
+table#reaction_list th {
+    font-weight: bold;
+    padding: 10px 2%;
+}
+
+table#reaction_list .reaction_name {
+    width: 20%;
+    padding: 10px 2%;
+}
+table#reaction_list .reaction_date {
+    width: 20%;
+}
+
+table#reaction_list .reaction_title {
+    width: 37%;
+}
+
+table#reaction_list .reaction_action {
+    width: 13%;
+}

@@ -54,12 +54,11 @@ public enum AttributeConst {
     REACTION("reaction"),
     REACTIONS("reactions"),
     REA_ID("id"),
-    REA_ADMIN_FLAG("admin_flag"),
-    REA_CODE("code"),
+    REA_DATE("reaction_date"),
+    REA_STAMP("stamp"),
     REA_COUNT("count"),
-    REA_DELETE_FLAG("delete_flag"),
-    REA_NAME("name"),
-    REA_PASSWORD("password");
+    REA_TITLE("title"),
+    REA_CONTENT("content");
 
 
     private final String text;
