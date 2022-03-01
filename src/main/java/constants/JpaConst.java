@@ -29,6 +29,18 @@ public interface JpaConst {
     int EMP_DEL_TRUE = 1; //削除フラグON(削除済み)
     int EMP_DEL_FALSE = 0; //削除フラグOFF(現役)
 
+    //リアクションテーブル
+    String TABLE_REA = "reactions"; //テーブル名
+    //リアクションテーブルカラム
+    String REA_COL_ID = "id"; //id
+    String REA_COL_EMP = "employee_id"; //リアクションを作成した従業員のid
+    String REA_COL_TITLE = "title";//リアクションの題名
+    String REA_COL_CONTENT = "content"; //日報の内容
+    String REA_COL_STAMP ="stamp";
+    String REA_COL_CREATED_AT = "created_at"; //登録日時
+    String REA_COL_UPDATED_AT = "updated_at"; //更新日時
+    String REA_COL_REA_DATE = "reaction_date";//いつのリアクションかを示す日付
+
     //日報テーブル
     String TABLE_REP = "reports"; //テーブル名
     //日報テーブルカラム
@@ -43,6 +55,7 @@ public interface JpaConst {
     //Entity名
     String ENTITY_EMP = "employee"; //従業員
     String ENTITY_REP = "report"; //日報
+    String ENTITY_REA = "reaction";
 
     //JPQL内パラメータ
     String JPQL_PARM_CODE = "code"; //社員番号
@@ -65,14 +78,30 @@ public interface JpaConst {
     //全ての日報をidの降順に取得する
     String Q_REP_GET_ALL = ENTITY_REP + ".getAll";
     String Q_REP_GET_ALL_DEF = "SELECT r FROM Report AS r ORDER BY r.id DESC";
+    String Q_REA_GET_ALL = ENTITY_REA + ".getAll";
+    String Q_REA_GET_ALL_DEF = "SELECT r FROM Report AS r ORDER BY r.id DESC";
     //全ての日報の件数を取得する
     String Q_REP_COUNT = ENTITY_REP + ".count";
     String Q_REP_COUNT_DEF = "SELECT COUNT(r) FROM Report AS r";
+    String Q_REA_COUNT = ENTITY_REA + ".count";
+    String Q_REA_COUNT_DEF = "SELECT COUNT(r) FROM Report AS r";
     //指定した従業員が作成した日報を全件idの降順で取得する
     String Q_REP_GET_ALL_MINE = ENTITY_REP + ".getAllMine";
     String Q_REP_GET_ALL_MINE_DEF = "SELECT r FROM Report AS r WHERE r.employee = :" + JPQL_PARM_EMPLOYEE + " ORDER BY r.id DESC";
+    String Q_REA_GET_ALL_MINE = ENTITY_REA + ".getAllMine";
+    String Q_REA_GET_ALL_MINE_DEF = "SELECT r FROM Report AS r "
+            + ""
+            + ""
+            + ""
+            + ""
+            + ""
+            + ""
+            + ""
+            + ""
+            + "WHERE r.employee = :" + JPQL_PARM_EMPLOYEE + " ORDER BY r.id DESC";
     //指定した従業員が作成した日報の件数を取得する
     String Q_REP_COUNT_ALL_MINE = ENTITY_REP + ".countAllMine";
     String Q_REP_COUNT_ALL_MINE_DEF = "SELECT COUNT(r) FROM Report AS r WHERE r.employee = :" + JPQL_PARM_EMPLOYEE;
-
+    String Q_REA_COUNT_ALL_MINE = ENTITY_REA + ".countAllMine";
+    String Q_REA_COUNT_ALL_MINE_DEF = "SELECT COUNT(r) FROM Report AS r WHERE r.employee = :" + JPQL_PARM_EMPLOYEE;
 }
