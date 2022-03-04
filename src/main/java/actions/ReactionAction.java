@@ -115,7 +115,7 @@ public class ReactionAction extends ActionBase {
                     null,
                     null);
 
-            //日報情報登録
+            //リアクション情報登録
             List<String> errors = service.create(rv);
 
             if (errors.size() > 0) {
@@ -146,7 +146,7 @@ public class ReactionAction extends ActionBase {
      */
     public void show() throws ServletException, IOException {
 
-        //idを条件に日報データを取得する
+        //idを条件にリアクションデータを取得する
         ReactionView rv = service.findOne(toNumber(getRequestParam(AttributeConst.REA_ID)));
 
         if (rv == null) {
@@ -168,7 +168,7 @@ public class ReactionAction extends ActionBase {
      */
     public void edit() throws ServletException, IOException {
 
-        //idを条件に日報データを取得する
+        //idを条件にリアクションデータを取得する
         ReactionView rv = service.findOne(toNumber(getRequestParam(AttributeConst.REA_ID)));
 
         //セッションからログイン中の従業員情報を取得
@@ -176,7 +176,7 @@ public class ReactionAction extends ActionBase {
 
         if (rv == null || ev.getId() != rv.getEmployee().getId()) {
             //該当のリアクションデータが存在しない、または
-            //ログインしている従業員が日報の作成者でない場合はエラー画面を表示
+            //ログインしている従業員がリアクションの作成者でない場合はエラー画面を表示
             forward(ForwardConst.FW_ERR_UNKNOWN);
 
         } else {
