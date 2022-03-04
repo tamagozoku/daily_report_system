@@ -62,7 +62,7 @@ public class ReactionAction extends ActionBase {
         }
 
         //一覧画面を表示
-        forward(ForwardConst.FW_REA_INDEX);
+        forward(ForwardConst.FW_REA_INDEX2);
     }
     /**
      * 新規登録画面を表示する
@@ -79,7 +79,7 @@ public class ReactionAction extends ActionBase {
         putRequestScope(AttributeConst.REACTION, rv); //日付のみ設定済みのリアクションインスタンス
 
         //新規登録画面を表示
-        forward(ForwardConst.FW_REA_NEW);
+        forward(ForwardConst.FW_REA_NEW2);
 
     }
     /**
@@ -126,7 +126,7 @@ public class ReactionAction extends ActionBase {
                 putRequestScope(AttributeConst.ERR, errors);//エラーのリスト
 
                 //新規登録画面を再表示
-                forward(ForwardConst.FW_REA_NEW);
+                forward(ForwardConst.FW_REA_NEW2);
 
             } else {
                 //登録中にエラーがなかった場合
@@ -158,7 +158,7 @@ public class ReactionAction extends ActionBase {
             putRequestScope(AttributeConst.REACTION, rv); //取得したリアクションデータ
 
             //詳細画面を表示
-            forward(ForwardConst.FW_REA_SHOW);
+            forward(ForwardConst.FW_REA_SHOW2);
         }
     }
     /**
@@ -185,7 +185,7 @@ public class ReactionAction extends ActionBase {
             putRequestScope(AttributeConst.REACTION, rv); //取得したリアクションデータ
 
             //編集画面を表示
-            forward(ForwardConst.FW_REA_EDIT);
+            forward(ForwardConst.FW_REA_EDIT2);
         }
 
     }
@@ -218,7 +218,7 @@ public class ReactionAction extends ActionBase {
                 putRequestScope(AttributeConst.ERR, errors); //エラーのリスト
 
                 //編集画面を再表示
-                forward(ForwardConst.FW_REA_EDIT);
+                forward(ForwardConst.FW_REA_EDIT2);
             } else {
                 //更新中にエラーがなかった場合
 

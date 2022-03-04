@@ -40,10 +40,10 @@ public enum ForwardConst {
     FW_REP_SHOW("reports/show"),
     FW_REP_NEW("reports/new"),
     FW_REP_EDIT("reports/edit"),
-    FW_REA_SHOW("reactions/show"),
-    FW_REA_NEW("reactions/new"),
-    FW_REA_EDIT("reactions/edit"),
-    FW_REA_INDEX("reactions/index");
+    FW_REA_SHOW2("reactions/show2"),
+    FW_REA_NEW2("reactions/new2"),
+    FW_REA_EDIT2("reactions/edit2"),
+    FW_REA_INDEX2("reactions/index2");
 
 
 
